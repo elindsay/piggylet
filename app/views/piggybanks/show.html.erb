@@ -1,0 +1,19 @@
+<div>
+  <%= @piggybank.name %>
+</div>
+<div>
+  Total Amount:
+  <%= @piggybank.total_cents %>
+</div>
+<div>
+  Convert to:
+  <%= form_tag url: piggybank_path(@piggybank), method: :get do %>
+    <br />
+    <%= radio_button_tag :coin, "pennies" %>
+    Pennies
+    <br />
+    <%= radio_button_tag :coin, "nickles" %>
+    Nickles
+    <%= submit_tag :coin %>
+  <% end %>
+</div>

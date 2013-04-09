@@ -3,6 +3,10 @@ class PiggybanksController < ApplicationController
     @piggybanks = Piggybank.all
   end
 
+  def show
+    @piggybank = Piggybank.find(params[:id])
+  end
+
   def new
     @piggybank = Piggybank.new
   end
