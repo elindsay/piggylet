@@ -1,0 +1,4 @@
+<% @piggybanks.each do |piggybank| %>
+  <%= link_to piggybank.name, edit_piggybank_path(piggybank) %>
+<% end %>
+<%= link_to "Create New", new_piggybank_path %>

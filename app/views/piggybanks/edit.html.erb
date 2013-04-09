@@ -1,0 +1,56 @@
+<div style="float: left;">
+  <%= form_for @piggybank do |f| %>
+    <%= @piggybank.name %>
+    <br />
+    <%= f.label :penny %>
+    <%= f.text_field :penny %>
+    <br />
+    <%= f.label :nickle %>
+    <%= f.text_field :nickle %>
+    <br />
+    <%= f.label :dime %>
+    <%= f.text_field :dime %>
+    <br />
+    <%= f.label :quarter %>
+    <%= f.text_field :quarter %>
+    <br />
+    <%= f.label :dollar %>
+    <%= f.text_field :dollar %>
+    <br />
+    <%= f.submit%>
+  <% end %>
+</div>
+<div style="float: left;">
+  <div>
+    Coin / Number / Cents
+  </div>
+  <div>
+    Pennies /
+    <%= @piggybank.penny %> /
+    <%= @piggybank.penny.to_i %>
+  </div>
+  <div>
+    Nickle /
+    <%= @piggybank.nickle %> /
+    <%= @piggybank.nickle.to_i*5 %>
+  </div>
+  <div>
+    Dime /
+    <%= @piggybank.dime %> /
+    <%= @piggybank.dime.to_i*10 %>
+  </div>
+  <div>
+    Quarter /
+    <%= @piggybank.quarter %> /
+    <%= @piggybank.quarter.to_i*25 %>
+  </div>
+  <div>
+    Dollar /
+    <%= @piggybank.dollar %> /
+    <%= @piggybank.dollar.to_i*100 %>
+  </div>
+  <div>
+    Total / /
+    <%= @piggybank.total_cents %>
+  </div>
+</div>
